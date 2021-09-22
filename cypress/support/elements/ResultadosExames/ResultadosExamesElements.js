@@ -1,4 +1,4 @@
-class LoginElements {
+class ResultadosExamesElements {
     resultadoExames = () => { return '.exams-results' }
 
    validarTexto= () => { return '.title' }
@@ -12,6 +12,6 @@ class LoginElements {
     //mensagemErro = () => { return '.description' }
 }
 
-export default LoginElements;
+export default ResultadosExamesElements;
 
 

@@ -1,10 +1,10 @@
 /// <reference types="Cypress" />
 
-import LoginElements from '../elements/LoginElements'
-const loginElements = new LoginElements
+import ResultadosExamesElements from '../elements/ResultadosExames/ResultadosExamesElements'
+const resultadosexamesElements = new ResultadosExamesElements
 const url = Cypress.config("baseUrl")
 
-class LoginPage {
+class ResultadosExamesPage {
     // Acessa o site que será testado
     acessarSite() {
         cy.visit(url)
@@ -12,7 +12,7 @@ class LoginPage {
 
     // Clica no botão Assista na pagina Home
     clicarResultadoExames() {
-        cy.get(loginElements.resultadoExames()).click()
+        cy.get(resultadosexamesElements.resultadoExames()).click()
     }
 
     /* Clica no botão de realizar login
@@ -32,7 +32,7 @@ class LoginPage {
 
     //Verifica se o texto "Manifesto Dasa" está disponivel
     visualizarTexto() {
-        cy.get(loginElements.validarTexto()).should('contain', 'Resultados de Exames')
+        cy.get(resultadosexamesElements.validarTexto()).should('contain', 'Resultados de Exames')
     }
 
     /* Visualizar mensagem de erro "Usuário ou senha inválidos."
@@ -42,4 +42,4 @@ class LoginPage {
     
 }
 
-export default LoginPage;
+export default ResultadosExamesPage;

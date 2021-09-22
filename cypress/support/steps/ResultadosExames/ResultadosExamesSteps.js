@@ -1,7 +1,7 @@
 /* global Given, Then, When */
 
-import LoginPage from '../pageobjects/LoginPage'
-const loginPage = new LoginPage
+import ResultadosExamesPage from '../pageobjects/ResultadosExames/ResultadosExamesPage'
+const resultadosexamesPage = new ResultadosExamesPage
 
 /*And("informo {} incorreto", (email) => {
     loginPage.informarEmail(email);
@@ -12,7 +12,7 @@ const loginPage = new LoginPage
 })*/
 
 Given("acesso o site Salomao Zoppi", () => {
-    loginPage.acessarSite();
+    resultadosexamesPagePage.acessarSite();
 })
 
 /*When("acesso a pagina Home", () => {
@@ -20,11 +20,11 @@ Given("acesso o site Salomao Zoppi", () => {
 })*/
 
 When("acesso o resultados de exames", () => {
-    loginPage.clicarResultadoExames();
+    resultadosexamesPagePage.clicarResultadoExames();
 })
 
 Then("devo visualiar o texto", () => {
-    loginPage.visualizarTexto();
+    resultadosexamesPagePage.visualizarTexto();
 })
 
 /*Then("devo visualizar mensagem de erro", () => {
